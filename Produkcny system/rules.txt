@@ -1,0 +1,32 @@
+Meno: DruhyRodic1
+AK    ?X je rodic ?Y,manzelia ?X ?Z
+POTOM pridaj ?Z je rodic ?Y
+
+Meno: DruhyRodic2
+AK    ?X je rodic ?Y,manzelia ?Z ?X
+POTOM pridaj ?Z je rodic ?Y
+
+Meno: Otec
+AK    ?X je rodic ?Y,muz ?X
+POTOM pridaj ?X je otec ?Y
+
+Meno: Matka
+AK    ?X je rodic ?Y,zena ?X
+POTOM pridaj ?X je matka ?Y
+
+Meno: Surodenci
+AK    ?X je rodic ?Y,?X je rodic ?Z,<> ?Y ?Z
+POTOM pridaj ?Y a ?Z su surodenci
+
+Meno: Brat
+AK    ?Y a ?Z su surodenci,muz ?Y
+POTOM pridaj ?Y je brat ?Z
+
+Meno: Stryko
+AK    ?Y je brat ?Z,?Z je rodic ?X
+POTOM pridaj ?Y je stryko ?X,sprava ?X ma stryka
+
+Meno: Test mazania
+AK    ?Y je stryko ?X,zena ?X
+POTOM vymaz zena ?X
+

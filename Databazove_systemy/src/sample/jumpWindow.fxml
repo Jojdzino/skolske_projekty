@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="174.0" prefWidth="275.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="label_id" alignment="CENTER" layoutX="-1.0" layoutY="77.0" prefHeight="21.0" prefWidth="275.0" text="Label" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font></Label>
+      <Button fx:id="delete" layoutX="118.0" layoutY="129.0" mnemonicParsing="false" onAction="#close" text="Ok" />
+   </children>
+</AnchorPane>

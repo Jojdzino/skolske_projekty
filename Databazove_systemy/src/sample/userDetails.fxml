@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="931.0" prefWidth="1151.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="21.0" text="Meno používateľa" />
+      <Label fx:id="meno_id" layoutX="20.0" layoutY="42.0" text="Label">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Label>
+
+      <TableView fx:id="transakcie_table" layoutX="14.0" layoutY="132.0" prefHeight="541.0" prefWidth="717.0">
+        <columns>
+
+          <TableColumn prefWidth="131.0" text="Meno prijímateľa">
+              <cellValueFactory>
+                  <PropertyValueFactory property="meno" />
+              </cellValueFactory>
+          </TableColumn>
+
+          <TableColumn prefWidth="170.0" text="Priezvisko prijímateľa">
+              <cellValueFactory>
+                  <PropertyValueFactory property="priezvisko" />
+              </cellValueFactory>
+          </TableColumn>
+
+          <TableColumn prefWidth="190.0" text="Odoslaná suma (v Eurách)">
+              <cellValueFactory>
+                  <PropertyValueFactory property="suma" />
+              </cellValueFactory>
+          </TableColumn>
+
+          <TableColumn prefWidth="225.0" text="Typ účtu prijímateľa">
+              <cellValueFactory>
+                  <PropertyValueFactory property="typ_uctu" />
+              </cellValueFactory>
+
+          </TableColumn>
+        </columns>
+      </TableView>
+
+      <Label layoutX="14.0" layoutY="110.0" text="Informacie o odoslaných online transakciách" />
+      <Label fx:id="priezvisko_id" layoutX="441.0" layoutY="42.0" text="Label">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Label>
+
+      <TableView fx:id="poistenie_table" layoutX="6.0" layoutY="707.0" prefHeight="200.0" prefWidth="528.0">
+        <columns>
+
+          <TableColumn prefWidth="311.0" text="Typ poistenia">
+              <cellValueFactory>
+                  <PropertyValueFactory property="typ_poistenia" />
+              </cellValueFactory>
+          </TableColumn>
+
+          <TableColumn minWidth="8.0" prefWidth="105.0" text="Zaciatok">
+              <cellValueFactory>
+                  <PropertyValueFactory property="zaciatok" />
+              </cellValueFactory>
+          </TableColumn>
+
+          <TableColumn prefWidth="110.0" text="Koniec">
+              <cellValueFactory>
+                  <PropertyValueFactory property="koniec" />
+              </cellValueFactory>
+          </TableColumn>
+
+        </columns>
+      </TableView>
+
+      <Label layoutX="14.0" layoutY="676.0" text="Poistenie používateľa" />
+
+       <TableView fx:id="kartaTable" layoutX="778.0" layoutY="466.0" prefHeight="200.0" prefWidth="290.0">
+        <columns>
+
+          <TableColumn prefWidth="40.0" text="Cislo">
+              <cellValueFactory>
+                  <PropertyValueFactory property="cislo" />
+              </cellValueFactory>
+          </TableColumn>
+
+          <TableColumn minWidth="0.0" prefWidth="250.0" text="Typ">
+              <cellValueFactory>
+                  <PropertyValueFactory property="typ" />
+              </cellValueFactory>
+          </TableColumn>
+
+        </columns>
+      </TableView>
+
+      <Label layoutX="778.0" layoutY="445.0" text="Karty používateľa" />
+      <Button layoutX="811.0" layoutY="766.0" mnemonicParsing="false" onAction="#update" text="Zmeniť meno" />
+      <Button fx:id="delete" layoutX="785.0" layoutY="832.0" mnemonicParsing="false" onAction="#delete" text="Zmazať používateľa" />
+      <TextField fx:id="meno_field" layoutX="779.0" layoutY="697.0" promptText="Meno" />
+      <TextField fx:id="priezvisko_field" layoutX="779.0" layoutY="728.0" promptText="Priezvisko" />
+      <GridPane layoutX="779.0" layoutY="35.0" prefHeight="382.0" prefWidth="335.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="333.0" minWidth="10.0" prefWidth="333.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="145.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="220.0" minHeight="10.0" prefHeight="156.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="151.0" minHeight="0.0" prefHeight="89.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+      
+                   <TableView fx:id="prijmy_table" prefHeight="143.0" prefWidth="306.0">
+              <columns>
+      
+                      <TableColumn prefWidth="212.0" text="Založenie účtu">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="datum" />
+                    </cellValueFactory>
+                </TableColumn>
+      
+                      <TableColumn prefWidth="120.0" text="Celkový príjem">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="suma" />
+                    </cellValueFactory>
+                </TableColumn>
+      
+                    </columns>
+            </TableView>
+      
+             <TableView fx:id="vydaje_table" prefHeight="149.0" prefWidth="333.0" GridPane.rowIndex="1">
+      
+               <columns>
+                  <TableColumn prefWidth="215.0" text="Založenie účtu">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="datum" />
+                      </cellValueFactory>
+                  </TableColumn>
+      
+                  <TableColumn prefWidth="117.0" text="Celkový výdaj">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="suma" />
+                      </cellValueFactory>
+                  </TableColumn>
+               </columns>
+      
+             </TableView>
+            <GridPane GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="111.0" text=" Zobraz účty" onAction="#zobrazUcty" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+      <Label layoutX="778.0" layoutY="676.0" text="Úprava používateĺa" />
+   </children>
+</AnchorPane>

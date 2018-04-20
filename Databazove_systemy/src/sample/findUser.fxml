@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<AnchorPane prefHeight="579.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+       <Label layoutX="32.0" layoutY="44.0" text="Meno" />
+       <Label layoutX="19.0" layoutY="95.0" text="Priezvisko" />
+   
+       <TextField fx:id="meno_find_field" layoutY="65.0" prefHeight="31.0" prefWidth="112.0" />
+       <TextField fx:id="priezvisko_find_field" layoutY="116.0" prefHeight="31.0" prefWidth="112.0" />
+   
+       <Label layoutX="6.0" layoutY="4.0" text="Vyhľadaj podľa" />
+       <Button fx:id="hladaj_button" layoutX="24.0" layoutY="169.0" mnemonicParsing="false" onAction="#hladaj" text="Hľadaj" />
+
+       <TableView fx:id="tabulka" layoutX="122.0" layoutY="8.0" prefHeight="529.0" prefWidth="461.0">
+   
+           <columns>
+   
+               <TableColumn fx:id="id_column" prefWidth="79.0" text="ID">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="id" />
+                   </cellValueFactory>
+               </TableColumn>
+   
+               <TableColumn fx:id="meno_column" prefWidth="93.0" text="Meno">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="meno" />
+                   </cellValueFactory>
+               </TableColumn>
+   
+               <TableColumn fx:id="priezvisko_column" prefWidth="122.0" text="Priezvisko">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="priezvisko" />
+                   </cellValueFactory>
+               </TableColumn>
+   
+               <TableColumn fx:id="datum_column" prefWidth="165.0" text="Datum narodenia">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="datum" />
+                   </cellValueFactory>
+               </TableColumn>
+   
+         </columns>
+
+       </TableView>
+
+      <Button fx:id="next_button" disable="true" layoutX="531.0" layoutY="541.0" mnemonicParsing="false" onAction="#next" text="Ďalší" />
+      <Button fx:id="prev_button" disable="true" layoutX="122.0" layoutY="541.0" mnemonicParsing="false" onAction="#prev" text="Predchádzajúci" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,5 @@
+<root>
+    <item name='java.lang.Throwable void printStackTrace()'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="358.0" prefWidth="1046.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+
+      <TableView fx:id="vyber_hotovosti_table" layoutX="93.0" layoutY="34.0" prefHeight="291.0" prefWidth="358.0">
+        <columns>
+          <TableColumn prefWidth="211.0" text="Typ účtu">
+              <cellValueFactory>
+                  <PropertyValueFactory property="typ" />
+              </cellValueFactory>
+          </TableColumn>
+
+          <TableColumn minWidth="0.0" prefWidth="68.0" text="Suma">
+              <cellValueFactory>
+                  <PropertyValueFactory property="suma" />
+              </cellValueFactory>
+          </TableColumn>
+
+            <TableColumn prefWidth="78.0" text="Percentá">
+                <cellValueFactory>
+                    <PropertyValueFactory property="percenta" />
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+      </TableView>
+
+
+       <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="516.0" text="Pomer velkosti vyberu hotovosti k sume všetkých výberov pre každý typ účtu" />
+
+       <TableView fx:id="karty_table" layoutX="612.0" layoutY="34.0" prefHeight="291.0" prefWidth="358.0">
+        <columns>
+
+          <TableColumn prefWidth="160.0" text="Typ karty">
+              <cellValueFactory>
+                  <PropertyValueFactory property="typ" />
+              </cellValueFactory>
+          </TableColumn>
+
+          <TableColumn prefWidth="126.0" text="Počet">
+              <cellValueFactory>
+                  <PropertyValueFactory property="suma" />
+              </cellValueFactory>
+          </TableColumn>
+
+            <TableColumn prefWidth="70.0" text="Percentá">
+                <cellValueFactory>
+                    <PropertyValueFactory property="percenta" />
+                </cellValueFactory>
+
+            </TableColumn>
+        </columns>
+      </TableView>
+
+      <Label layoutX="607.0" layoutY="14.0" text="Pocet a podiel všetkých typov kariet k celkovému poctu" />
+   </children>
+</AnchorPane>

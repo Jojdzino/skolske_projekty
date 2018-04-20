@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="240.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <Button id="addUserButton" layoutX="36.0" layoutY="29.0" mnemonicParsing="false" onAction="#addUser" prefHeight="86.0" prefWidth="203.0" text="Pridaj zákazníka" />
+      <Button fx:id="najdiButton" layoutX="259.0" layoutY="29.0" mnemonicParsing="false" onAction="#findUser" prefHeight="86.0" prefWidth="203.0" text="Najdi zákazníka" />
+      <Button layoutX="151.0" layoutY="132.0" mnemonicParsing="false" onAction="#statistika" prefHeight="86.0" prefWidth="197.0" text="Štatistiky" />
+  </children>
+</AnchorPane>
